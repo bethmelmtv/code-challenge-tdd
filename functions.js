@@ -65,7 +65,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return firstNumber / secondNumber * thirdNumber;
+    return (firstNumber / secondNumber) * thirdNumber;
 }
 
 
@@ -98,7 +98,8 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return 'firstNumber+secondNumber+thirdNumber';
+    return [firstNumber] + [secondNumber] + [thirdNumber];
+    //the brackets make the items a string
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -115,7 +116,7 @@ Output:
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
     const num = firstNumber + secondNumber;
-    return 'Hello! Your lucky number for the day is ' + num;
+    return 'Hello! Your lucky number for the day is ' + num + '.';
 }
 
 // This function should take an array and return the second item in the array
@@ -159,6 +160,6 @@ export function getLastItem(array) {
 // Ask yourself: even if you cannot predict the result exactly, what _do_ you know about what it should return? Use that expectation to write your test
 
 export function getRandomNumber() {
-    const random = Math.floor(Math.random() * 6);
+    const random = Math.ceil(Math.random() * 5);
     return random;
 }
